@@ -1,0 +1,7 @@
+# node.js - babel - webpack modules
+node_modules
+
+# config files
+package.json
+package-lock.json
+webpack.config.js

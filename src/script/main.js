@@ -1,47 +1,32 @@
 import './style.css';
-import noise from './noise';
+import {Card} from './card';
+import {MainUI} from './ui';
 
-noise();
+// navbar elements
 
-var title = document.getElementById('main-title').cloneNode(true);
-document.querySelector('.titleCont').appendChild(title);
-title.classList.add("overTitle")
-var line = document.createElement('div');
-line.className = 'line';
-document.getElementById('main-content').appendChild(line); 
+  // search button animation start
+  document.addEventListener("touchstart", function(){}, true);
 
-var tl = new TimelineMax({repeat:-1});
+// main-body elements
 
-for(var i=50; i--;){
-  tl.to(title,R(0.03,0.17),{opacity:R(0,1),y:R(-1.5,1.5), x:R(-1.5,1.5)})
-};
+  
+  let count = 0; // Counter that increments every time a card is created
 
-tl.to(line,tl.duration()/2,{opacity:R(0.1,1),x:R(-window.innerWidth/2,window.innerWidth/2),ease:RoughEase.ease.config({strength:0.5,points:10,randomize:true,taper: "none"}),repeat:1},0);
-
-
-  var dot;
-  for (var i=0; i < 10; i++){
-    dot = document.createElement('div');
-    dot.className = 'dot';
-    document.getElementById('main-content').prepend(dot); 
-   setDotPosition(dot);
-    tl.to(dot,0.1,{opacity:0,repeat:1, yoyo:true, onComplete:setDotPosition, onCompleteParams:[dot], ease:RoughEase.ease.config({strength:0.5,points:10,randomize:true,taper: "none"})},0);
+  // loading multiple cards at the beginning
+  const loadCards = (number) =>{
+      
+      for (let i =0 ; i<number ; i++) {
+        count ++;
+        
+        // creates and loads a new card instance with a unique id
+        let card = new Card (count);
+        card.load();
+      };    
   }
 
-function setDotPosition(dot)
-{
-  TweenMax.set(dot, {x:R(-window.innerWidth/2,window.innerWidth/2),y:R(-window.innerHeight,window.innerHeight), delay:R(0, 1)});
-}
+  loadCards(50);  // loading multiple cards at the beginning
+  const mainui = new MainUI(count);  // (check ui.js)
 
-
-function R(max,min){return Math.random()*(max-min)+min};
-
-// hiding the elements of the page while the cdn loades
-window.onload = () =>
-{ document.getElementById("hideAll").style.display = "block"; }
-
-// // and loading the elements once done
-// document.addEventListener('onloadend' , () =>
-// { document.getElementById("hideAll").style.display = "block";});
+  mainui.cardsPerLine();  // creates an empty div after every card break (check ui.js)
 
 

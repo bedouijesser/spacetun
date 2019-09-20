@@ -1,3 +1,15 @@
 # node.js - babel - webpack modules
 node_modules
 
+# local img and models folder
+/img
+/models
+
+# map files
+*.map
+
+# test scss file
+scss.scss
+scss.css
+
+package-lock.json

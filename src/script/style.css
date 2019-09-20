@@ -1,94 +1,189 @@
 body {
-    margin: 0
+    margin: 0;
+    background: rgba(36, 36,36,1);  
 }
-.main-content {
-    overflow:hidden;
+/* Custom Scroll Bar */
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #383838; 
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    width: 10px; 
+  }
+
+
+
+/* Navbar */
+
+  .navbar {
+    background: #383838;
+  }
+
+  /* Page Logo */
+  .logo-nav{
+    height: 2em;
+  }
+  .navbar-brand{
+    margin-left: 3em;
+  }
+  /* Nav items */
+  .nav-link {
+    color: #fff
+  }
+  .nav-link :hover{
+    color: #383838
+  }
+  /* search bar sleek */
+  
+  
+  .search-box {
+    -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
+    transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
+    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s, -webkit-box-shadow 0.6s;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: #ebebeb;
+  }
+  
+  .search-box + label .search-icon {
+    color: black;
+  }
+  
+  .search-box:hover {
+    color: white;
+    background: #c8c8c8;
+    -webkit-box-shadow: 0 0 0 5px #3d4752;
+            box-shadow: 0 0 0 5px #3d4752;
+  }
+  
+  .search-box:hover + label .search-icon {
+    color: white;
+  }
+  
+  .search-box:focus {
+    -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+    transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 300px;
+    border-radius: auto;
+    background: #ebebeb;
+    color: black;
+  }
+  
+  .search-box:focus + label .search-icon {
+    color: black;
+  }
+  
+  .search-box:not(:focus) {
+    text-indent: -5000px;
+  }
+  
+  #search-submit {
+    position: relative;
+    left: -5000px;
+  }
+  
+  .search-icon {
+    position: relative;
+    left: -32px;
+    color: black;
+    cursor: pointer;
+  }
+  /*# sourceMappingURL=scss.css.map */
+  
+
+/* main body content */
+  .main-content {
+      
       position: relative;
-      
       display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-flow: column;
-      
-      height: 100vh;
-      
-      background: linear-gradient(to right, rgba(36,31,31,1) 0%, rgba(36,31,31,1) 32%, rgba(74,71,70,1) 100%);
-      color: #fff;
-      text-align: center;
+      margin: 0 14vw 0 18vw;
+      height: 90vh;
   }
-  
-  .vignette{
-    position:absolute;
-    width:100%; height:100%;
-    box-shadow:inset 0px 0px 150px 20px black;
-    mix-blend-mode: multiply;
-    -webkit-animation: vignette-anim 3s infinite; /* Safari 4+ */
-    -moz-animation:    vignette-anim 3s infinite; /* Fx 5+ */
-    -o-animation:      vignette-anim 3s infinite; /* Opera 12+ */
-    animation:         vignette-anim 3s infinite; /* IE 10+, Fx 29+ */
+
+  /* Main boyd (where the magic happens :DDD) */
+  .main-content a {
+    text-decoration: none;
+    color: #323232;
   }
-  
-  .noise {
-      z-index: 100;
-      position: absolute;
-      top: 0;
-      left: 0;
-      
-      width: 100%;
-      height: 100%;
-      
-      pointer-events: none;
-      opacity: .15;
+
+  /* Cards  */
+  .cardie-container{
+    
+    margin-left:0.5em;
+    margin-top: 0.8em;
   }
-  
-  .line{
-    position:absolute;
-    height:100%; width:1px;
-    opacity:0.1;
-    background-color:#000;
+  .cardie {
+    height: 25vh; width: 25vh;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
   }
-  
-  .titleCont{position:relative;}
-  
-  .main-title {
-      padding: .3em 1em .25em;    
-      font-weight: 400;
-      font-size: 40px;
-      color: white;
-      font-family: 'Bellefair', serif;
-      position:relative;
-      line-height:1.3;
-      white-spacing:
+  .cardie:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: scale(1.05);
   }
-  
-  .overTitle{
-      position:absolute;
-      top:0;
-      left:0;
+
+
+/* sidebar */
+  .sidebar{ 
+    width: 17vw; 
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
   }
-  
-  .dot{
-    width:3px;
-    height:2px;
-    background-color:white;
-    position:absolute;
-    opacity:0.3;
+  .sidebar a {
+    margin-left: 0.5em;
+    padding: 0.1em 0.5em 0.3em 0.2em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #e4e4e4;
+    display: inline-block;
   }
-  
-  
-  @-webkit-keyframes vignette-anim {
-    0%   , 100%{ opacity: 1; }
-    50% { opacity: 0.7; }
-  }
-  @-moz-keyframes vignette-anim {
-    0%   , 100%{ opacity: 1; }
-    50% { opacity: 0.7; }
-  }
-  @-o-keyframes vignette-anim {
-    0%   , 100%{ opacity: 1; }
-    50% { opacity: 0.7; }
-  }
-  @keyframes vignette-anim {
-    0%   , 100%{ opacity: 1; }
-    50% { opacity: 0.7; }
-  }
+
+
+
+/* Note Bootstrap */
+/*Extra small (xs) devices (portrait phones, less than 570pxs)
+no media query since this is the default in Bootstrap
+
+small(sm) devices (ladscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Ectra (xl) large devices (large desktops, 1200px and up)
+@media (min-widht: 1200px) { ... } 
+*/

@@ -57,7 +57,7 @@ import {MainUI} from './ui';
         
         const displayCard = new DisplayCard(divElem,card.id);
         displayCard.load();
-        
+        divElem.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
       });
     });
   

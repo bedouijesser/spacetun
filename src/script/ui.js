@@ -34,7 +34,7 @@ class MainUI {
             // console.log(leftCard,rightCard) 
             
              
-            if (Math.abs(leftCard - rightCard) > 50) {
+            if (Math.abs(leftCard - rightCard) > 50 || i === this.count) {
                 
                 if (firstTest && !this.resize) {result = i} else {firstTest--}; // checks if CardsPerLine result is found and there has been no screen resizes
                 

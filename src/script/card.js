@@ -14,7 +14,7 @@ class Card {
     load()
     {   // Creats a new element for the card
 
-        const card= `<a href="#" class="clickCard" id=${this.id}>
+        const card= `<a class="clickCard" id=${this.id}>
         <div class="cardie-container">
             <div class="cardie">       
                 <div class="cardie-body">

@@ -1,26 +1,31 @@
-body {
+body 
+{
     margin: 0;
     background: rgba(36, 36,36,1);  
 }
 /* Custom Scroll Bar */
 
   /* width */
-  ::-webkit-scrollbar {
+  ::-webkit-scrollbar 
+  {
     width: 10px;
   }
 
   /* Track */
-  ::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track 
+  {
     background: #383838; 
   }
   
   /* Handle */
-  ::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb 
+  {
     background: #888; 
   }
 
   /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+  ::-webkit-scrollbar-thumb:hover 
+  {
     background: #555;
     width: 10px; 
   }
@@ -29,28 +34,38 @@ body {
 
 /* Navbar */
 
-  .navbar {
+  .navbar 
+  {
     background: #383838;
   }
 
-  /* Page Logo */
-  .logo-nav{
-    height: 2em;
+  /* toggler icon */
+  .navbar-toggler-icon 
+  {
+    color: #fff
   }
-  .navbar-brand{
+  /* Page Logo */
+  .logo-nav
+  {
+    height: 2em
+  }
+  .navbar-brand
+  {
     margin-left: 3em;
   }
   /* Nav items */
-  .nav-link {
+  .nav-link 
+  {
     color: #fff
   }
-  .nav-link :hover{
+  .nav-link :hover
+  {
     color: #383838
   }
   /* search bar sleek */
-  
-  
-  .search-box {
+
+  .search-box 
+  {
     -webkit-transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
     transition: width 0.6s, border-radius 0.6s, background 0.6s, -webkit-box-shadow 0.6s;
     transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
@@ -63,22 +78,26 @@ body {
     background: #ebebeb;
   }
   
-  .search-box + label .search-icon {
+  .search-box + label .search-icon 
+  {
     color: black;
   }
   
-  .search-box:hover {
+  .search-box:hover 
+  {
     color: white;
     background: #c8c8c8;
     -webkit-box-shadow: 0 0 0 5px #3d4752;
             box-shadow: 0 0 0 5px #3d4752;
   }
   
-  .search-box:hover + label .search-icon {
+  .search-box:hover + label .search-icon 
+  {
     color: white;
   }
   
-  .search-box:focus {
+  .search-box:focus 
+  {
     -webkit-transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
     transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
     border: none;
@@ -93,31 +112,35 @@ body {
     color: black;
   }
   
-  .search-box:focus + label .search-icon {
+  .search-box:focus + label .search-icon 
+  {
     color: black;
   }
   
-  .search-box:not(:focus) {
+  .search-box:not(:focus) 
+  {
     text-indent: -5000px;
   }
   
-  #search-submit {
+  #search-submit 
+  {
     position: relative;
     left: -5000px;
   }
   
-  .search-icon {
+  .search-icon 
+  {
     position: relative;
     left: -32px;
     color: black;
     cursor: pointer;
   }
-  /*# sourceMappingURL=scss.css.map */
+
   
 
 /* main body content */
-  .main-content {
-      
+  .main-content 
+  {   
       position: relative;
       display: flex;
       margin: 0 14vw 0 18vw;
@@ -125,7 +148,8 @@ body {
   }
 
   /* Main body (where the magic happens :DDD) */
-  .main-content a {
+  .main-content a 
+  {
     text-decoration: none;
     color: #323232;
   }
@@ -133,33 +157,46 @@ body {
   /* Cards  */
     
     /* Removes the click/drag option */
-    .clickCard{
+    .clickCard
+    {
       user-select: none;
       -webkit-user-drag: none;
     }
     
-    .cardie-container{
-
-      margin-left:0.5em;
-      margin-top: 0.8em;
+    .cardie-container
+    {
+      margin:0.8em 0 0 0.5em;
     }
-    .cardie {
+    .cardie 
+    {
       height: 25vh; width: 25vh;
       background: #fff;
       border-radius: 2px;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
       overflow: hidden;
-      
     }
-    .cardie:hover{
+    .cardie:hover
+    {
       box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
       transform: scale(1.05);
+    }
+    .display-cardie-container
+    {
+      margin: 0.8em 15em 0 12em;
+    }
+    .display-cardie
+    {
+      height: 50vh; width: 50vh;
+      background: #fff;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); 
     }
 
 
 /* sidebar */
-  .sidebar{ 
+  .sidebar
+  { 
     width: 17vw; 
     position: fixed;
     z-index: 1;
@@ -169,7 +206,8 @@ body {
     padding-top: 20px;
   }
   
-  .sidebar a {
+  .sidebar a 
+  {
     margin-left: 0.5em;
     padding: 0.1em 0.5em 0.3em 0.2em;
     text-decoration: none;

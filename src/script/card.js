@@ -47,11 +47,16 @@ class DisplayCard {
                 </div>
             </div>
         </div>
-        </a>`;
+        </a>
+        <div class="display-content-container">
+            <p>User: <span style="color:#ffc107"> ${this.id}</span></p>
+            <p>Date: DD/MM/YYYY</p>
+
+        </div>`;
         
         //  Inegrates the element in the dom
         this.elem.innerHTML = card;
     }
 };
 
-export {Card,DisplayCard};
+export {Card,DisplayCard,mainBody};

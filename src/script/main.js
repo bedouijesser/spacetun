@@ -1,13 +1,12 @@
 import './style.css';
-import {Card,DisplayCard} from './card';
+import {Card,DisplayCard,mainBody} from './card';
 import {MainUI} from './ui';
 
 
 // navbar elements
 
   // search button animation start
-  document.addEventListener("touchstart", function(){}, true);
-
+ 
 // main-body elements
 
   let count = 0; // Counter that increments every time a card is created
@@ -36,16 +35,15 @@ import {MainUI} from './ui';
       mainUi.cardsPerLine();
     });
   
-  // Displays the content of a card on the next div node
+  // Displays the content of a card on the displaycardie div 
   let divElem = HTMLPreElement;
 
   document.querySelectorAll('.clickCard')
     .forEach(card =>{
       
-       
-      
       card.addEventListener('click', e => {  
         e.preventDefault();
+
         if (divElem.id !== HTMLPreElement) divElem.innerHTML = ''; // removes the previous display-card  
         divElem = card;
         
@@ -60,4 +58,12 @@ import {MainUI} from './ui';
         divElem.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
       });
     });
-  
+
+  // erases the diplaycard content when clicking outside the frame  
+
+  mainBody.addEventListener('click',e=>{
+    // console.log(e.target.classList.contains('card-display'))
+    if(e.target.classList.contains('card-display')) {
+      divElem.innerHTML = '';
+    }
+});

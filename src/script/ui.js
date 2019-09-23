@@ -1,7 +1,8 @@
 // Main body functions 
 // CardPerLine calcluates the number of cards per line 
 
-let result = 0; // contains the C/L result
+// contains the Cardes per line result
+let result = 0; 
 
 class MainUI {
     constructor(count) {
@@ -27,20 +28,31 @@ class MainUI {
         // iterates throught the card element two by two comparing offsetTop attr to determine an element break
         for(let i=1 ; i<this.count ; i++)
         {
-            const leftSelect = document.getElementById(`${i}`); // Selector for the left card element
+            // Selector for the left card element
+            const leftSelect = document.getElementById(`${i}`);
+            const rightSelect = document.getElementById(`${i+1}`); 
             // offset from the window top
                 var leftCard = leftSelect.offsetTop; 
-                var rightCard = document.getElementById(`${i+1}`).offsetTop; 
+                var rightCard = rightSelect.offsetTop;
+
             // console.log(leftCard,rightCard) 
-            
-             
-            if (Math.abs(leftCard - rightCard) > 50 || i === this.count) {
-                
-                if (firstTest && !this.resize) {result = i} else {firstTest--}; // checks if CardsPerLine result is found and there has been no screen resizes
+            // console.log( rightSelect.nextElementSibling );
+            if (Math.abs(leftCard - rightCard) > 50) {
+                 
+                // checks if CardsPerLine result is found and there has been no screen resizes
+                if (firstTest && !this.resize) {result = i} else {firstTest--}; 
                 
                 leftSelect.insertAdjacentHTML('afterend','<div class="card-display"></div>');
                 
             };
+            //fix for the last card bug
+            if( rightSelect.nextElementSibling == null)
+            {
+                 // checks if CardsPerLine result is found and there has been no screen resizes
+                 if (firstTest && !this.resize) {result = i} else {firstTest--}; 
+                
+                 rightSelect.insertAdjacentHTML('afterend','<div class="card-display"></div>');
+            }
         };
         this.resize++;
     }

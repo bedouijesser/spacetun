@@ -7,14 +7,17 @@ const mainBody = document.querySelector('.content'); // main body where the magi
 // The card Class
 class Card {
 
-    constructor(id) {
-        this.id = id
+    constructor(id, spacePts) {
+        this.id = id,
+        this.spacePts= spacePts
     }
 
     load()
-    {   // Creats a new element for the card
-
-        const card= `<a class="clickCard" id=${this.id}>
+    {   
+        // Creats a new element for the card
+        
+        // console.log(this.spacePts)
+        const card= `<a class="clickCard" id=${this.id} spacePts=${this.spacePts}>
         <div class="cardie-container">
             <div class="cardie">       
                 <div class="cardie-body">
@@ -31,31 +34,32 @@ class Card {
 // The Card-diplay Class
 class DisplayCard {
 
-    constructor(_elem,_id) {
-        this.elem = _elem,
-        this.id = _id
+    constructor(displayElem,card) {
+        this.displayElem = displayElem,
+        this.card = card
     }
 
     load()
     {   // Creats a new element for the DisplayCard
-
-        const card= `<div class="display-cardie-container" id=${this.id}>
-            <div class="display-cardie">       
-                <div class="cardie-body">
-                </div>
-                <div class="display-cardie-user">
-                </div>
+        
+        // console.log(this.card.getAttribute('spacePts'));
+        const card= `
+        <div class="display-cardie-container" id=${this.card.id}>
+            <p style="color:#e5e5e5">just now</p>   
+            <div class="display-cardie">           
+                <div class="cardie-body"></div>
             </div>
         </div>
-        </a>
+        
         <div class="display-content-container">
-            <p>User: <span style="color:#ffc107"> ${this.id}</span></p>
-            <p>Date: DD/MM/YYYY</p>
+            <p>User: <span style="color:#ffc107"> ${this.card.id}</span></p>
+            <p class="space-Pts">${this.card.getAttribute('spacePts')} <i class="fas fa-rocket"></i></p>
+            
 
         </div>`;
         
         //  Inegrates the element in the dom
-        this.elem.innerHTML = card;
+        this.displayElem.innerHTML = card;
     }
 };
 

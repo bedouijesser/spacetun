@@ -16,9 +16,10 @@ import {MainUI} from './ui';
       
       for (let i =0 ; i<number ; i++) {
         count ++;
-        
+        // a random "spacePts" value for each card inst
+        const randSpacePts = Math.floor(Math.random() * 99);
         // creates and loads a new card instance with a unique id
-        let card = new Card (count);
+        let card = new Card (count,randSpacePts);
         card.load();
       };    
   }
@@ -44,22 +45,26 @@ import {MainUI} from './ui';
       card.addEventListener('click', e => {  
         e.preventDefault();
 
-        if (divElem.id !== HTMLPreElement) divElem.innerHTML = ''; // removes the previous display-card  
+        // removes the previous display-card  
+          if (divElem.id !== HTMLPreElement) divElem.innerHTML = ''; 
+
         divElem = card;
         
         do {
+          if (divElem == null) break;
           divElem = divElem.nextElementSibling;
         } while (divElem.classList.value != 'card-display')
         
-        // console.log('element found', divElem); // logs the next div element
+        // logs the next div element
+        // console.log('element found', divElem); 
         
-        const displayCard = new DisplayCard(divElem,card.id);
+        const displayCard = new DisplayCard(divElem,card);
         displayCard.load();
         divElem.scrollIntoView({behavior: "smooth", block: "center", inline: "center"});
       });
     });
 
-  // erases the diplaycard content when clicking outside the frame  
+  // erase the diplaycard content when clicking outside the frame  
 
   mainBody.addEventListener('click',e=>{
     // console.log(e.target.classList.contains('card-display'))

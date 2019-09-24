@@ -24,12 +24,12 @@ body
     background: #888; 
   }
 
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover 
-  {
-    background: #555;
-    width: 10px; 
-  }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover 
+    {
+      background: #555;
+      width: 10px; 
+    }
 
 
 /* Navbar */
@@ -54,29 +54,30 @@ body
   .logo-nav
   {
     height: 6vh;
-  }
-  .navbar-brand
-  {
     margin-left: 3em;
   }
+  
   /* Nav items */
-  .nav-link
-  {
-    color: #fff;
-    margin-left: 4vh;
-    font-size: 2.5vh
-  }
+  
   .nav-item
   {
     margin-left: 4vh;
   }
+
+    .nav-link
+    {
+      color: #fff;
+      margin-left: 4vh;
+      font-size: 2.5vh
+    }
+  
   .nav-item:hover .nav-link{
     color: #e5e5e5;
   }
   .navbar-right 
   {
     align-self: flex-end;
-    margin-right: 4vh; 
+    margin-right: 3vh; 
   }
   .navbar-left 
   {
@@ -84,37 +85,58 @@ body
   }
  
   /* search bar sleek */
-  input[type="text"] {
-    background: #444;
-    border: 0 none;
-    color: #d7d7d7;
-    width:50px;
-    padding: 6px 15px 6px 35px;
-    border-radius: 20px;
-     margin:3px 80px;
-  }
-
-  input[type="text"]:focus {
-    background:#ccc;
-    color: #6a6f75;
-    padding-left:120px;  
-    margin-left:35px;
-    outline: none;
-  }
-
-  input[type="text"] {
-    transition: all 0.7s ease 0s;
+  
+  .inner-container 
+  {
+    position: block;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
+    input[type="text"] 
+    {
+      background: #444;
+      border: 0 none;
+      color: #d7d7d7;
+      width: 0em;
+      padding: 0.4rem 1.2em;
+      border-radius: 20px;
+      margin: 0 6rem;
+      z-index: -1;
+    }
+
+      input[type="text"]:focus 
+      {
+        background:#ccc;
+        color: #6a6f75; 
+        width: 11em;
+        padding-right: 2em;
+        margin-right: 6rem;
+        outline: none;
+      }
+
+    input[type="text"] 
+    {
+      transition: all 0.7s ease 0s;
+    }
+    
+    .fa-search 
+    {
+      position: relative;
+      color: #ccc;
+      z-index: 1;
+      right: 8rem
+    }
 
 /* main body content */
   .main-content 
   {   
-      position: relative;
-      display: flex;
-      margin: 0 14vh 0 18vw;
-      height: 90vh;
-      max-width: 75vw;
+    position: relative;
+    display: flex;
+    margin: 0 14vh 0 18vw;
+    height: 90vh;
+    max-width: 75vw;
   }
 
   /* Main body (where the magic happens :DDD) */
@@ -138,20 +160,21 @@ body
     {
       margin:0.8em 0 0 0.5em;
     }
-    .cardie 
-    {
-      height: 25vh; width: 25vh;
-      background: #fff;
-      border-radius: 0.5vh;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-      overflow: hidden;
-    }
-    .cardie:hover
-    {
-      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
-      transform: scale(1.05);
-    }
+      .cardie 
+      {
+        height: 25vh; width: 25vh;
+        background: #fff;
+        border-radius: 0.5vh;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        overflow: hidden;
+      }
+        .cardie:hover
+        {
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
+          transform: scale(1.05);
+        }
+    /* The container for the next element  */
     .card-display 
     {
       display: flex;
@@ -162,7 +185,7 @@ body
     }
     .display-cardie-container
     {
-      margin-top: 20vh;
+      margin-top: 15vh;
     }
       .display-cardie
       {
@@ -194,6 +217,16 @@ body
         color: lightsalmon;
       }
 
+  /* login form */
+  .login-box 
+  {
+    background: #fff;
+    height: 65vh;
+    width: 65vw;
+  }
+
+
+
 /* sidebar */
   .sidebar-left
   { 
@@ -206,16 +239,20 @@ body
     padding-top: 20px;
   }
   
-  .sidebar-left a 
-  {
-    margin-left: 0.5em;
-    padding: 0.1em 0.5em 0.3em 0.2em;
-    text-decoration: none;
-    font-size: 1.2em;
-    color: #e4e4e4;
-    display: inline-block;
-  }
+    .sidebar-left a 
+    {
+      margin-left: 0.5em;
+      padding: 0.1em 0.5em 0.3em 0.2em;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #fff;
+      display: inline-block;
+    }
+      .sidebar-left a:hover 
+      {
+        color: #aaa;
 
+      }
   
 
 /* Note Bootstrap */
@@ -231,6 +268,6 @@ Medium (md) devices (tablets, 768px and up)
 Large (lg) devices (desktops, 992px and up)
 @media (min-width: 992px) { ... }
 
-Ectra (xl) large devices (large desktops, 1200px and up)
+Extra (xl) large devices (large desktops, 1200px and up)
 @media (min-widht: 1200px) { ... } 
 */

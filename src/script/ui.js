@@ -1,23 +1,28 @@
 // Main body functions 
-// CardPerLine calcluates the number of cards per line 
+// HomeUI.CardPerLine() determines when the card breaks line, and injects a div after the last card per line.
+
 
 // contains the Cardes per line result
 let result = 0; 
 
-class MainUI {
-    constructor(count) {
+class HomeUI 
+{
+    constructor(count) 
+    {
         this.count = count,
         this.resize = 0
     }
 
     //  Creates a div element after line break 
-    cardsPerLine() {
+    cardsPerLine() 
+    {
     
         // Fires when there are screen resizes and removes pre placed divs
-        if (this.resize) {
-        document.querySelectorAll('.card-display')
-            .forEach(card =>{
-                card.remove();
+        if (this.resize) 
+        {
+            document.querySelectorAll('.card-display')
+                .forEach(card =>{
+                    card.remove();
             });
         };
             
@@ -37,8 +42,8 @@ class MainUI {
 
             // console.log(leftCard,rightCard) 
             // console.log( rightSelect.nextElementSibling );
-            if (Math.abs(leftCard - rightCard) > 50) {
-                 
+            if (Math.abs(leftCard - rightCard) > 50) 
+            {     
                 // checks if CardsPerLine result is found and there has been no screen resizes
                 if (firstTest && !this.resize) {result = i} else {firstTest--}; 
                 
@@ -58,4 +63,6 @@ class MainUI {
     }
 };
 
-export {MainUI};
+
+
+export {HomeUI};

@@ -1,10 +1,9 @@
-// Creat a card class
-// Render card templates to the dom
-// Determine when a card element breaks to the next line
+// creates and renders different templates to the dom
+
 
 const mainBody = document.querySelector('.content'); // main body where the magic happens 
 
-// The card Class
+// the class that renders the Display card
 class Card {
 
     constructor(id, spacePts) {
@@ -26,12 +25,12 @@ class Card {
         </div>
         </a>`;
         
-        //  Inegrates the element in the dom
+        //  Renders the element in the dom
         mainBody.innerHTML += card;
     }
 };
 
-// The Card-diplay Class
+// the class that renders the Display card
 class DisplayCard {
 
     constructor(displayElem,card) {
@@ -58,9 +57,25 @@ class DisplayCard {
 
         </div>`;
         
-        //  Inegrates the element in the dom
+        //  Renders the element in the dom
         this.displayElem.innerHTML = card;
     }
 };
 
-export {Card,DisplayCard,mainBody};
+class Login 
+{   
+    load()
+    {
+        // Clears the previous dom elements
+        mainBody.innerHTML='';
+
+        const form = 
+        `<div class="login-box">azeazea
+        </div>`
+
+        mainBody.innerHTML=form;
+    }
+
+}
+
+export {mainBody,Card,DisplayCard,Login};

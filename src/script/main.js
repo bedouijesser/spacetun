@@ -1,3 +1,4 @@
+// note to self: the webpack server script compiles the code but "doesn't" save it to the bundled js file.. huh.. 
 // Main site file
 // imports all other .js/.css files for bundling
 // Determine when a card element breaks to the next line

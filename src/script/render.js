@@ -6,8 +6,8 @@ const mainBody = document.querySelector('.content'); // main body where the magi
 // the class that renders the Display card
 class Card {
 
-    constructor(id, spacePts) {
-        this.id = id,
+    constructor(userId, spacePts) {
+        this.userId = userId,
         this.spacePts= spacePts
     }
 
@@ -16,7 +16,7 @@ class Card {
         // Creats a new element for the card
         
         // console.log(this.spacePts)
-        const card= `<a class="clickCard" id=${this.id} spacePts=${this.spacePts}>
+        const card= `<a class="clickCard" id=${this.userId} spacePts=${this.spacePts}>
         <div class="cardie-container">
             <div class="cardie">       
                 <div class="cardie-body">
@@ -43,8 +43,9 @@ class DisplayCard {
         
         // console.log(this.card.getAttribute('spacePts'));
         const card= `
-        <div class="display-cardie-container" id=${this.card.id}>
-            <p style="color:#e5e5e5">just now</p>   
+        <div class="display-cardie-container" id=${this.card.userId}>
+            <h2>Insert Title Here</h2>
+            <p>just now</p>   
             <div class="display-cardie">           
                 <div class="cardie-body"></div>
             </div>
@@ -70,7 +71,15 @@ class Login
         mainBody.innerHTML='';
 
         const form = 
-        `<div class="login-box">azeazea
+        `<div class="login-container">           
+            <div class="singIn">
+                <form>
+                    <h2>Sign In</h2>
+                    <input type="text" placeholder="email"></input>
+                    <input type="password" placeholder="password"></input>
+                    <img src="./" alt="Reacptcha">
+            </div>
+            <div class="singUp">Sign Up</div
         </div>`
 
         mainBody.innerHTML=form;

@@ -3,6 +3,10 @@
 // imports all other .js/.css files for bundling
 // Determine when a card element breaks to the next line
 
+
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid.min';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import {mainBody,Card,DisplayCard,Login} from './render';
 import {HomeUI} from './ui';
@@ -11,8 +15,8 @@ import {HomeUI} from './ui';
 // navbar elements
 
   // search button animation start
-  const searchIcon = document.querySelector("form > a");
-  const searchInputField = document.querySelector("form > input")
+  const searchIcon = document.querySelector(".navbar-right > li:nth-child(1) > div > form > a");
+  const searchInputField = document.querySelector(".navbar-right > li:nth-child(1) > div > form > input")
   
   searchIcon.addEventListener('click', e =>{
     e.preventDefault;

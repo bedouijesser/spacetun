@@ -94,7 +94,7 @@ body
     width: 100%;
   }
   
-    .navbar-right > li:nth-child(1) > div > form > input[type="text"] 
+    .navbar-right input[type="text"] 
     {
       background: #444;
       border: 0 none;
@@ -106,7 +106,7 @@ body
       z-index: -1;
     }
 
-      .navbar-right > li:nth-child(1) > div > form > input[type="text"]:focus 
+      .navbar-right input[type="text"]:focus 
       {
         background:#ccc;
         color: #6a6f75; 
@@ -115,12 +115,12 @@ body
         margin-right: 6rem;
         outline: none;
       }
-      .navbar-right > li:nth-child(1) > div > form > input[type="text"]:hover
+      .navbar-right input[type="text"]:hover
       {
         cursor: pointer;
       }
 
-      .navbar-right > li:nth-child(1) > div > form > input[type="text"] 
+      .navbar-right input[type="text"] 
     {
       transition: all 0.7s ease 0s;
     }
@@ -143,15 +143,17 @@ body
     max-width: 75vw;
   }
 
-  /* Main body (where the magic happens :DDD) */
-  .main-content a 
+  
+  
+
+  /* Cards  */
+  
+  .main-content .cardie a 
   {
     text-decoration: none;
     color: #323232;
   }
-
-  /* Cards  */
-    
+  
     /* Removes the click/drag option */
     .clickCard
     {
@@ -239,13 +241,19 @@ body
     width: 65vw;
     margin-top: 2vh;
     color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
     
   }
   .signIn
+  { 
+    align-self: flex-start;
+    align-items: center
+  }
+  .signUp
   {
-    display: flex;
-    flex-direction: column
-    
+    align-self: flex-end;
   }
   
 

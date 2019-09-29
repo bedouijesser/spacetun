@@ -74,12 +74,45 @@ class Login
         `<div class="login-container">           
             <div class="singIn">
                 <form>
-                    <h2>Sign In</h2>
-                    <input type="text" placeholder="email"></input>
-                    <input type="password" placeholder="password"></input>
-                    <img src="./" alt="Reacptcha">
+                <div id="signIn-Container">   
+                <h4>Sign In</h4>
+                
+                <form action="/" method="post">
+                
+                  <div class="field-wrap">
+                  <label>
+                    Email Address<span class="req">*</span>
+                  </label>
+                  <input type="email"required autocomplete="off"/>
+                </div>
+                
+                <div class="field-wrap">
+                  <label>
+                    Password<span class="req">*</span>
+                  </label>
+                  <input type="password"required autocomplete="off"/>
+                </div>
+                
+                <p class="forgot"><a href="#">Forgot Password?</a></p>
+                
+                <button class="button button-block"/>Log In</button>
+                
+                </form>
+      
+              </div>
             </div>
-            <div class="singUp">Sign Up</div
+            <div class="singUp">
+                <h4>Sign Up</h4>
+                <p>This site uses ivite codes to get in. if you have code
+                already go ahead and redeem it in order to register an 
+                account, if not, click <a href="#">Here</a> to order yours
+                now. </p>
+                <div class="field-wrap">
+                  <label>  Redeem Invite </label>
+                  <input type="text" placeholder="Code" required/>
+                  <button class="btn btn-dark"/>Log In</button>
+                </div>
+            </div>
         </div>`
 
         mainBody.innerHTML=form;

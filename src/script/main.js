@@ -8,22 +8,22 @@ import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid.min';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import {mainBody,Card,DisplayCard,Login} from './render';
+import {mainBody,MainBody,Card,DisplayCard,Login} from './render';
 import {HomeUI} from './ui';
 
 
-// navbar elements
+// search button animation start
+const searchIcon = document.querySelector(".navbar-right > li:nth-child(1) > div > form > a");
+const searchInputField = document.querySelector(".navbar-right > li:nth-child(1) > div > form > input")
 
-  // search button animation start
-  const searchIcon = document.querySelector(".navbar-right > li:nth-child(1) > div > form > a");
-  const searchInputField = document.querySelector(".navbar-right > li:nth-child(1) > div > form > input")
-  
-  searchIcon.addEventListener('click', e =>{
-    e.preventDefault;
-    searchInputField.focus();
-  })
+searchIcon.addEventListener('click', e =>{
+  e.preventDefault;
+  console.log(e.target.gethtml);
+  searchInputField.focus();
+})
 
 // main-body elements
+  
 
   // main menu / meme cards 
     let count = 0; // Counter that increments every time a card is created
@@ -40,7 +40,7 @@ import {HomeUI} from './ui';
           card.load();
         };    
     }
-
+    // T loades 50 blank cards at the beginning
     loadCards(50);  
     
     const HomeUi = new HomeUI(count);  // (check ui.js)
@@ -96,13 +96,48 @@ import {HomeUI} from './ui';
   
   
   // Login / Register
-    // Creates a new login instence; check render.js
+    // login instence for loading login forms; check render.js
     const login = new Login;
 
-    const navLogin = document.querySelector('.login');
-      
-      navLogin.addEventListener('click', e =>
+    // a main body instence for clearing the body elements; check render.js
+    const mainbd = new MainBody;
+
+    const navBrand = document.querySelector('.navbar-brand');
+    const navHomeBtn = document.querySelector('.home-lnk');
+    const navNewBtn = document.querySelector('.new-lnk');
+    const navLoginBtn = document.querySelector('.login-lnk');
+
+      navBrand.addEventListener('click', e =>
       {
         e.preventDefault();
+      
+        mainbd.clear();
+        count = 0;
+        loadCards(50);
+    });
+      
+      navHomeBtn.addEventListener('click', e =>
+      {
+        e.preventDefault();
+       
+        mainbd.clear();
+        count = 0;
+        loadCards(50);
+    });
+
+      navNewBtn.addEventListener('click', e =>
+      {
+        e.preventDefault();
+       
+        mainbd.clear();
+        count = 0;
+        loadCards(50);
+    });
+
+      navLoginBtn.addEventListener('click', e =>
+      {
+        e.preventDefault();
+
+        mainbd.clear();
         login.load();
     });

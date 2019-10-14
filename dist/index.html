@@ -8,62 +8,105 @@
    
     
 <body>
-
+  
   <!-- navbar -->
   <nav class="navbar navbar-expand-md sticky-top">
-
-    <a class="navbar-brand" href="#"><img class="logo-nav" src="assets\img\logo.png"></a>
-    
-    <button class="navbar-toggler btn btn-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       
-      <span class="navbar-toggler-icon pt-1"><i class="fas fa-bars"></i></span>
-    
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarText">
-    
-    <ul class="nav navbar-nav navbar-left">
+      <a class="navbar-brand" href="#"><img class="logo-nav" src="assets\img\logo.png"></a>
       
-      <li class="nav-item">
-        <a class="nav-link home-lnk" href="#">Home</a>
-      </li>
-      
-      <li class="nav-item">
-        <a class="nav-link new-lnk" href="#">New</a>
-      </li>
-
-    </ul>
-
-    <ul class="nav nabar-nav navbar-right">
-      
-      <li class="nav-item">
+      <button class="navbar-toggler btn btn-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         
-        <div class="inner-container">
-          <form class="search-bar">  
-            <input type="text" placeholder="watcha' lookin for?">
-            <a href="#"><i class="fas fa-search"></i></a>          </form>
-        </div>
-
-      </li>
-
-      <li class="nav-item">
-          <a class="nav-link login-lnk" href="#">Login</a>
+        <span class="navbar-toggler-icon pt-1"><i class="fas fa-bars"></i></span>
+      
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarText">
+      
+      <ul class="nav navbar-nav navbar-left">
+        
+        <li class="nav-item">
+          <a class="nav-link home-lnk" href="#">Home</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link new-lnk" href="#">New</a>
         </li>
 
-    </ul>
-    </div>	
+      </ul>
+
+      <ul class="nav nabar-nav navbar-right">
+        
+        <li class="nav-item">
+          
+          <div class="inner-container">
+            <form class="search-bar">  
+              <input type="text" placeholder="watcha' lookin for?">
+              <i class="fas fa-search"></i>         
+            </form>
+          </div>
+
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link login-lnk" href="#">Login</a>
+          </li>
+
+      </ul>
+      </div>	
+    </div>
   </nav>
 
     <!-- main body -->
     <main role="main" class="main-content" id="main-content">  
       
       <div class="containter-fluid row content">
+          <div class="login-container">           
+          
+              <div class="signIn" style="background-color: red">
+                <form>   
+                  
+                  <h4>Sign In</h4>
+      
+                  <input class="code-input" type="email" placeholder="Email" required/>  
+      
+                  <br>
+                  <input class="code-input" type="password" placeholder="Password" required/>
+                  
+                  <p class="forgot"><a href="#">Forgot Password?</a></p>
+                  
+                  <button class="btn btn-light"/>Sign In</button>
+                  
+                </form>
+              </div>
+              
+              <!-- the vertical line -->
+              <div class="vl"></div>
+                    
+              <div class="signUp" style="background-color:yellow;">
+              
+                  <form>
+                      
+                      <h4>Sign Up</h4>
+                      
+                      <p>This site uses invite codes to get in. if you have code
+                      already go ahead and redeem it in order to register an 
+                      account, if not, click <a href="#">Here</a> to order yours
+                      now. </p>
+                      
+                      <input class="code-input" type="text" placeholder="Code" required/>
+                
+                      <button class="btn btn-warning signIn-btn"/>Log In</button>
+      
+                  </form>
+      
+              </div>
           <!--  -->
           </div>
         </div>          
       </main>
     <!-- side bar -->
     <div class="sidebar-left">
+      <h2>hhhhhh</h2>
       <a href="#" class="about-lnk">About</a>
       <a href="#" class="contact-lnk">Contact</a>
       <a href="#" class="shop-lnk">Shop</a>

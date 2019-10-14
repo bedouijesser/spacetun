@@ -101,28 +101,24 @@ body
       color: #d7d7d7;
       width: 0em;
       padding: 0.4rem 1.2em;
-      border-radius: 20px;
       margin: 0 1rem;
       z-index: -1;
     }
 
-      .navbar-right input[type="text"]:focus 
+      .navbar-right input[type="text"]:hover
       {
         background:#ccc;
         color: #6a6f75; 
-        width: 11em;
+        width: 20em;
         padding-right: 2em;
         margin-right: 1rem;
         outline: none;
-      }
-      .navbar-right input[type="text"]:hover
-      {
         cursor: pointer;
       }
-
+      
       .navbar-right input[type="text"] 
     {
-      transition: all 0.7s ease 0s;
+      transition: all 0.4s ease 0s;
     }
     
     .fa-search 
@@ -162,21 +158,19 @@ body
     
     .cardie-container
     {
-      margin:0.8em 0 0 0.5em;
+      margin:1px;
     }
       .cardie 
       {
-        height: 25vh; width: 25vh;
+        height: 15vh; width: 15vh;
         background: #fff;
-        border-radius: 0.5vh;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         overflow: hidden;
       }
         .cardie:hover
         {
-          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2), 0 10px 10px rgba(0, 0, 0, 0.22);
-          transform: scale(1.05);
+          cursor: pointer;
         }
     /* The container for the card display element  */
     .card-display 
@@ -189,7 +183,7 @@ body
     }
     .display-cardie-container
     {
-      margin-top: 15vh;
+      margin-top: 10vh;
     }
     .display-cardie-container p
     {
@@ -245,17 +239,16 @@ body
     flex-direction: row;
   }
     .signIn
-    { 
-      justify-self: flex-start;
-      margin-left: 2rem;
+    {
+      margin:0 3rem;
     }
-      .psw-label
+      .signIn input
       {
-        margin-right: 2rem
+        margin: 1vh 0;
       }
       .signIn-btn
       {
-        margin: 1em 0;
+        margin: 1vh 0;
       }
 
     /* Vertical line */
@@ -263,11 +256,12 @@ body
       border-left: 2px solid #6a6f75;
       height: 60vh;
       margin-left: 2vh;
+      align-self: center
     }
 
     .signUp
     { display: flex;
-      margin:0 2rem;
+      margin:0 5rem;
       max-width: 15rem;
       align-items: center;
     }
@@ -291,8 +285,9 @@ body
       margin-left: 0.5em;
       padding: 0.1em 0.5em;
       text-decoration: none;
-      font-size: 1.2em;
+      font-size: 0.8em;
       color: #fff;
+      font-weight:100;
       display: inline-block;
     }
       .sidebar-left a:hover 
@@ -300,8 +295,27 @@ body
         color: #aaa;
 
       }
-  
-
+  .side-container 
+  {
+    background: #383838;
+    height: 86vh;
+    width: 65vw;
+    margin-top: 2vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+    .side-container p
+    {
+      margin: 0 2em;
+      font-size: 1.2em;
+    }
+    .side-container li
+    {
+      margin: 1em 0;
+    }
 /* Note Bootstrap */
 /*Extra small (xs) devices (portrait phones, less than 570pxs)
 no media query since this is the default in Bootstrap

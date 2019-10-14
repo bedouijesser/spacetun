@@ -71,29 +71,24 @@ class DisplayCard {
     }
 };
 
-class Login 
+class ChangePage 
 {   
     // displays the card on the card display container
     
-    load()
+    login()
     {
         const form = 
-        `<div class="login-container">           
+        ` <div class="login-container">           
           
         <div class="signIn">
           <form>   
             
             <h4>Sign In</h4>
 
-            <div class="field-wrap">
-              <label>Email Address<span class="req">*</span></label>
-              <input type="email" required autocomplete="off"/>  
-            </div>
-            
-            <div class="field-wrap">
-              <label class="psw-label">Password<span class="req">*</span></label>
-              <input type="password" required autocomplete="off"/>
-            </div>
+            <input class="code-input" type="email" placeholder="Email" required/>  
+
+            <br>
+            <input class="code-input" type="password" placeholder="Password" required/>
             
             <p class="forgot"><a href="#">Forgot Password?</a></p>
             
@@ -116,11 +111,8 @@ class Login
                 account, if not, click <a href="#">Here</a> to order yours
                 now. </p>
                 
-                <div class="field-wrap">
-                <label>  Redeem Invite </label>
-                <input type="text" placeholder="Code" required/>
-                </div>
-                
+                <input class="code-input" type="text" placeholder="Code" required/>
+          
                 <button class="btn btn-warning signIn-btn"/>Log In</button>
 
             </form>
@@ -129,7 +121,53 @@ class Login
 
         mainBody.innerHTML=form;
     }
+    about()
+    {
+        const form = 
+        `<div class="side-container">
+            
+        <p>Spacetun is non profit website. <br>
+        Meaning, unless you buy our merch or click on our ads, we will never charge you for using the site. <br> 
+        <br>
+        Since this website uses invite only system there are few rules to keep mind in order to keep your access code: <br>
+        </p>
+        
+        <ol>
+          <li>Watch fight club</li>
+          <li>click on this <a href="#">link</a></li>
+          <li>No abusive language or hate speech</li>
+          <li>Religion, Whatever it is, We don't talk about that here</li>
+          <li>harassing users for invites or Sp will get you warnings, get 3 and you're out</li>
+          <li>You do not ask to be a Mod, Mods get picked on Sp only</li>
+        </ol>
+      </div>`
+        mainBody.innerHTML=form;
+    }
+    contact()
+    {
+        const form = 
+        `<div class="login-container"></div>`
+        mainBody.innerHTML=form;
+    }
+    shop()
+    {
+        const form = 
+        `<div class="login-container"></div>`
+        mainBody.innerHTML=form;
+    }
+    owner()
+    {
+        const form = 
+        `<div class="login-container"></div>`
+        mainBody.innerHTML=form;
+    }
+    faq()
+    {
+        const form = 
+        `<div class="login-container"></div>`
+        mainBody.innerHTML=form;
+    }
 
 }
 
-export {mainBody,MainBody,Card,DisplayCard,Login};
+export {mainBody,MainBody,Card,DisplayCard,ChangePage};
